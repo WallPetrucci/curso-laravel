@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContatoModelsTable extends Migration
+class CreateProdutosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateContatoModelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('contato_models', function (Blueprint $table) {
+        Schema::create('produtos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('titulo');
+            $table->string('descricao');
+            $table->decimal('valor',5,2);
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateContatoModelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contato_models');
+        Schema::dropIfExists('produtos');
     }
 }
