@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/contato', function (){
+    dd($_POST);
+    return 'contato-teste POST';
+});
+
+Route::put('/contato', function (){
+    return 'contato-teste PUT';
+});
