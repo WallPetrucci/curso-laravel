@@ -20,6 +20,11 @@ Route::post('/contato', function (){
     return 'contato-teste POST';
 });
 
+
 Route::put('/contato', function (){
     return 'contato-teste PUT';
+});
+
+Route::put('/contato', function (){
+    return 'meu-teste PUT';
 });
